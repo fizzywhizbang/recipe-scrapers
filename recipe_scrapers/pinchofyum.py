@@ -117,3 +117,10 @@ class PinchOfYum(JSONScraper):
 
     def calories(self):
         return self.data["nutrition"]["calories"]
+
+
+    def cholesterol(self):
+        return self.data["nutrition"]["cholesterol"]
+
+    def rawData(self):
+        return self.data.text

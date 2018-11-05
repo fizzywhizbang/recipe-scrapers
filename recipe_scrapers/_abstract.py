@@ -223,7 +223,8 @@ class JSONScraper():
             'cholesterol',
             'carbs',
             'calories',
-            'category'
+            'category',
+            'rawData'
         ]
         if name in decorated_methods:
             to_return = ''
@@ -315,3 +316,5 @@ class JSONScraper():
             if link['href'] not in invalid_href
         ]
 
+    def rawData(self):
+        return recipe.text
