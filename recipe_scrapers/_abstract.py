@@ -253,9 +253,12 @@ class JSONScraper():
 
             for recipe in self.soup.find_all('script', type='application/ld+json'):
                 self.JSON = recipe.text
-            self.data = json.loads(recipe.text)
-        self.url = url
+            try:
+                self.data = json.loads(recipe.text)
+            except:
+                print("not a recipe")
 
+        self.url = url
     def url(self):
         return self.url
 
@@ -317,4 +320,4 @@ class JSONScraper():
         ]
 
     def rawData(self):
-        return recipe.text
+        return self.JSON
