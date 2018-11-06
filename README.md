@@ -65,6 +65,7 @@ site - please fire an issue asap.
 - [http://thevintagemixer.com/](http://www.thevintagemixer.com/)
 - [http://twopeasandtheirpod.com/](http://twopeasandtheirpod.com/)
 - [http://whatsgabycooking.com/](http://whatsgabycooking.com/)
+- [https://pinchofyum.com/] (https://pinchofyum.com/)
 
 
 ### If you want a scraper for a new site added
