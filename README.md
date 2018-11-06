@@ -27,6 +27,9 @@ then:
     carbs = scrape_me.carbs()
     calories = scrape_me.calories()
     datePublished = scrape_me.datePublished()
+    cholesterol = scrape_me.cholesterol()
+    //raw json data
+    rawdata = scrape_me.rawData()
 
 Note: scrape_me.links() returns a dictionary object containing all of the <a> tag attributes. The attribute names are the dictionary keys.
 
