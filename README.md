@@ -27,6 +27,8 @@ then:
     carbs = scrape_me.carbs()
     calories = scrape_me.calories()
     datePublished = scrape_me.datePublished()
+    cholesterol = scrape_me.cholesterol()
+    rawdata = scrape_me.rawdata() //this is for JSON only
 
 Note: scrape_me.links() returns a dictionary object containing all of the <a> tag attributes. The attribute names are the dictionary keys.
 
@@ -65,7 +67,8 @@ site - please fire an issue asap.
 - [http://thevintagemixer.com/](http://www.thevintagemixer.com/)
 - [http://twopeasandtheirpod.com/](http://twopeasandtheirpod.com/)
 - [http://whatsgabycooking.com/](http://whatsgabycooking.com/)
-
+- [https://pinchofyum.com/](https://pinchofyum.com/)
+- [http://bigoven.com/](http://bigoven.com)
 
 ### If you want a scraper for a new site added
 
