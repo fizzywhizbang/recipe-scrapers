@@ -72,7 +72,7 @@ site - please fire an issue asap.
 
 ### If you want a scraper for a new site added
 
-- Open an [Issue](https://github.com/levinems/recipe-scraper/issues/new) providing us the site name, as well as a recipe link from it.
+- Open an [Issue](https://github.com/levinems/recipe-scraper/issues/new/choose) providing us the site name, as well as a recipe link from it.
 - If you are a developer and want to code the scraper on your own, [this is a wonderful example](https://github.com/hhursev/recipe-scraper/pull/29/files) of how to do it.
 
 #### For Devs
