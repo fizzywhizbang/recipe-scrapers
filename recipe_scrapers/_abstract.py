@@ -252,7 +252,8 @@ class JSONScraper():
             self.soup = BeautifulSoup(response.content, 'lxml')
 
             for recipe in self.soup.find_all('script', type='application/ld+json'):
-                self.JSON = recipe.text
+                self.JSON = recipe.text.replace("&quot;", "\"")
+
             try:
                 self.data = json.loads(recipe.text)
             except:

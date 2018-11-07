@@ -13,7 +13,8 @@ class BigOven(JSONScraper):
 
     #need to figure out something for date published
     def datePublished(self):
-        date = dateCleaner(self.data["datePublished"],6)
+
+        date = dateCleaner("null", 0)
         return date
 
     def description(self):
