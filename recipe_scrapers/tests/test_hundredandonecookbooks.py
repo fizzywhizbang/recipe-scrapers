@@ -25,7 +25,7 @@ class TestHundredAndOneCookbooksScraper(unittest.TestCase):
     def test_title(self):
         self.assertEqual(
             self.harvester_class.title(),
-            "Nikki's Healthy Cookies Recipe"
+            "Curried Tomato Tortellini Soup"
         )
 
     def test_total_time(self):
@@ -35,24 +35,28 @@ class TestHundredAndOneCookbooksScraper(unittest.TestCase):
         )
 
     def test_ingredients(self):
-        self.assertCountEqual(
-            [
-                '3 large, ripe bananas,  well mashed (about 1 1/2 cups)',
-                '1 teaspoon vanilla extract',
-                "1/4 cup coconut oil, barely warm - so it isn't solid (or alternately, olive oil)",
-                '2 cups rolled oats',
-                '2/3 cup almond meal',
-                '1/3 cup coconut, finely shredded & unsweetened',
-                '1/2 teaspoon cinnamon',
-                '1/2 teaspoon fine grain sea salt',
-                '1 teaspoon baking powder',
-                '6 - 7 ounces chocolate chips or dark chocolate bar chopped'
-            ],
+        self.assertEqual(
+                "4  big handfuls spinach, chopped (or frozen equiv) "
+                "2 tablespoons extra virgin olive oil"
+                "1  medium yellow onion, diced"
+                "3 cloves garlic, minced"
+                "2 1/2 teaspoons curry powder"
+                "3/4 teaspoon sweet (or smoked) paprika"
+                "1/2 teaspoon ground turmeric"
+                "3/4 teaspoon red chile flakes"
+                "1 28- ounce can whole tomatoes, with liquid"
+                "3/4 cup dried red lentils, rinsed"
+                "4 cups water"
+                "1 teaspoon fine grain sea salt, plus more to taste"
+                "8 ounces / 1/2 pound fresh tortellini"
+                "to serve: a bit of grated cheese, lemon (optional)"
+            ,
             self.harvester_class.ingredients()
         )
 
     def test_instructions(self):
         return self.assertEqual(
-            "Preheat oven to 350 degrees, racks in the top third.\nIn a large bowl combine the bananas, vanilla extract, and coconut oil. Set aside. In another bowl whisk together the oats, almond meal, shredded coconut, cinnamon, salt, and baking powder. Add the dry ingredients to the wet ingredients and stir until combined. Fold in the chocolate chunks/chips.The dough is a bit looser than a standard cookie dough, don't worry about it. Drop dollops of the dough, each about 2 teaspoons in size, an inch apart, onto a parchment (or Silpat) lined baking sheet. Bake for 12 - 14 minutes. I baked these as long as possible without burning the bottoms and they were perfect - just shy of 15 minutes seems to be about right in my oven.\nMakes about 3 dozen bite-sized cookies.\nPrint Recipe",
+            "If you're using frozen spinach, set it on the counter to thaw a bit. In the meantime, heat the olive oil in a large pot over medium-high heat. Stir in the onion and cook, stirring occasionally, for 5 minutes or so, until the onion has softened a bit. Stir in the garlic, wait a minute, then add the curry powder, paprika, turmeric, and chile flakes, and stir well.&nbsp;",
+            "Break up the tomatoes with your hands as you add them to the pot along with the tomato liquid, stir in the lentils, and the water. Cover and allow to cook for 15 minutes or so, until the lentils have cooked through. Stir in the salt, and then the tortellini. Cover and cook for another 3-5 minutes, or per package instructions - until tender and cooked through. Stir in the spinach bring back to a simmer, and serve with a dusting of cheese and a squeeze of lemon juice. If you need to thin out with a bit more water, do so, and re-season. Enjoy!",
             self.harvester_class.instructions()
         )
