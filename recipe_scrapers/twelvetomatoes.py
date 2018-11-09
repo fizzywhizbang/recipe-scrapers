@@ -46,11 +46,12 @@ class Twelvetomatoes(AbstractScraper):
             'li',
             {'itemprop': "recipeIngredient"}
         )
+        ing = ""
+        for ingredient in ingredients:
+            ing += ingredient.getText()
 
-        return [
-            normalize_string(ingredient.get_text())
-            for ingredient in ingredients
-        ]
+        return ing
+
 
     def instructions(self):
         instructions = self.soup.findAll(
@@ -58,10 +59,10 @@ class Twelvetomatoes(AbstractScraper):
             {'itemprop': 'instruction'}
         )
 
-        return '\n'.join([
-            normalize_string(instruction.get_text())
-            for instruction in instructions
-        ])
+        instr = ""
+        for instruction in instructions:
+            instr += instruction.getText()
+        return instr
 
     def datePublished(self):
         date = self.soup.findAll(
