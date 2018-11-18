@@ -28,7 +28,9 @@ from .whatsgabycooking import WhatsGabyCooking
 from .pinchofyum import PinchOfYum
 from .bigoven import BigOven
 from .twelvetomatoes import Twelvetomatoes
+from .bhg import bhg
 from .genericJSON import GenericJSON
+
 
 SCRAPERS = {
     AllRecipes.host(): AllRecipes,
@@ -59,6 +61,7 @@ SCRAPERS = {
     PinchOfYum.host(): PinchOfYum,
     BigOven.host(): BigOven,
     Twelvetomatoes.host(): Twelvetomatoes,
+    bhg.host(): bhg,
     GenericJSON.host(): GenericJSON
 }
 

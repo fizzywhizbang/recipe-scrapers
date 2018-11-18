@@ -22,6 +22,16 @@ def get_minutes(element):
     except AttributeError:  # if dom_element not found or no matched
         return 0
 
+def timecalc(value):
+    if "h" in value or "H" in value:
+        #time in hours
+        h = value.replace("PT").replace("H").replace("h")
+        HtoM = Int(h) * 60
+        return HtoM
+    if "m" in value or "M" in value:
+        #time in hours
+        m = value.replace("PT").replace("M").replace("m")
+        return m
 
 def normalize_string(string):
     return re.sub(

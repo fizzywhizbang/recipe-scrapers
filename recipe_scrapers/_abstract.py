@@ -6,12 +6,14 @@ from recipe_scrapers._utils import on_exception_return
 
 from fake_useragent import UserAgent
 
-import random, json
+import random, json, urllib3
 
 
 # some sites close their content for 'bots', so user-agent must be supplied using random user agent
 ua = UserAgent() # From here we generate a random user agent
 proxies = [] # Will contain proxies [ip, port]
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 
 #### adding proxy information so as not to get blocked so fast
 def getProxyList():
@@ -133,8 +135,10 @@ class AbstractScraper():
                     "html.parser"
                 )
         else:
+
             response = requests.get(url, headers=self.header, proxies=self.proxy)
             self.soup = BeautifulSoup(response.content, 'lxml')
+
         self.url = url
 
     def url(self):
@@ -252,12 +256,11 @@ class JSONScraper():
             self.soup = BeautifulSoup(response.content, 'lxml')
 
             for recipe in self.soup.find_all('script', type='application/ld+json'):
-                self.JSON = recipe.text.replace("&quot;", "\"")
-
-            try:
-                self.data = json.loads(recipe.text)
-            except:
-                print("not a recipe")
+                if "\"@type\":\"Recipe\"" in recipe.text:
+                    try:
+                        self.data = json.loads(recipe.text)
+                    except:
+                        print("not a recipe")
 
         self.url = url
     def url(self):

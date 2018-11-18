@@ -3,59 +3,90 @@ from ._utils import get_minutes, normalize_string
 
 
 class BBCGoodFood(AbstractScraper):
+        @classmethod
+        def host(self):
+            return 'bbcgoodfood.com'
 
-    @classmethod
-    def host(self):
-        return 'bbcgoodfood.com'
+        def title(self):
+            title = self.soup.find("meta", property="og:title")
+            return title['content']
 
-    def title(self):
-        return self.soup.find('h1', {'itemprop': 'name'}).get_text()
+        def total_time(self):
+            return 0
 
-    def total_time(self):
-        return sum([
-            get_minutes(self.soup.find(
-                'span',
-                {'class': 'recipe-details__cooking-time-prep'}
-            ).find('span')),
+        def description(self):
+            description = self.soup.find("meta", property="og:description")
+            return description['content']
 
-            get_minutes(self.soup.find(
-                'span',
-                {'class': 'recipe-details__cooking-time-cook'}
-            ).find('span'))
-        ])
+        def imgURL(self):
+            img = self.soup.find('meta', property='og:image')
+            return img["content"]
 
-    def ingredients(self):
-        ingredients = self.soup.find(
-            'section',
-            {'id': "recipe-ingredients"}
-        ).findAll('li')
-
-        return [
-            normalize_string(
-                '{normal_text}{tooltip_text}'.format(
-                    normal_text=ingredient.find(text=True),
-                    tooltip_text=ingredient.find('a').get_text() if ingredient.find('a') is not None else ''
-                )
+        def ingredients(self):
+            ingredients = self.soup.findAll(
+                'li',
+                {'itemprop': "ingredients"}
             )
-            for ingredient in ingredients
-        ]
 
-    def instructions(self):
-        instructions = self.soup.find(
-            'section',
-            {'id': 'recipe-method'}
-        ).findAll('li')
+            return [
+                normalize_string(ingredient["content"])
+                for ingredient in ingredients
 
-        instructions_string = '\n'.join([
-            normalize_string(instruction.get_text())
-            for instruction in instructions
-        ])
+            ]
 
-        instructions_string += '\n' + normalize_string(
-            self.soup.find(
-                'section',
-                {'id': 'recipe-method'}
+        def instructions(self):
+            instructions = self.soup.findAll(
+                'li',
+                {'itemprop': 'recipeInstructions'}
+            )
+
+            return '\n'.join([
+                normalize_string(instruction.get_text())
+                for instruction in instructions
+            ])
+
+        def datePublished(self):
+            date = self.soup.findAll(
+                'time',
+                {'itemprop': 'datePublished'}
+            )
+
+            dateClean = date["datetime"] + " 00:00:00"
+
+            return dateClean
+
+        def category(self):
+            category = self.soup.findAll(
+                'meta',
+                {'itemprop': 'recipeCategory'}
+            )
+
+        def sodium(self):
+            return self.soup.find(
+                'h3',
+                {'itemprop': 'sodiumContent'}
             ).get_text()
-        )
 
-        return normalize_string(instructions_string)
+        def fat(self):
+            return self.soup.find(
+                'h3',
+                {'itemprop': 'fatContent'}
+            ).get_text()
+
+        def carbs(self):
+            return self.soup.find(
+                'h3',
+                {'itemprop': 'carbohydrateContent'}
+            ).get_text()
+
+        def calories(self):
+            return self.soup.find(
+                'h3',
+                {'itemprop': 'calories'}
+            ).get_text()
+
+        def cholesterol(self):
+            return "999999"
+
+        def rawData(self):
+            return self.soup
