@@ -1,18 +1,17 @@
 from ._abstract import JSONScraper
 from ._utils import get_minutes, normalize_string, dateCleaner
 
-class HundredAndOneCookbooks(JSONScraper):
+class PinchOfYum(JSONScraper):
 
     @classmethod
     def host(self):
-        return '101cookbooks.com'
+        return 'pinchofyum.com'
 
     def title(self):
         return self.data["name"]
-
     #need to figure out something for date published
     def datePublished(self):
-        date = dateCleaner(self.data["datePublished"],6)
+        date = dateCleaner("null",6)
         return date
 
     def description(self):
@@ -20,7 +19,7 @@ class HundredAndOneCookbooks(JSONScraper):
 
 
     def total_time(self):
-        return get_minutes(data["prepTime"])
+        return get_minutes(data["totalTime"])
 
 
     def ingredients(self):
@@ -39,7 +38,7 @@ class HundredAndOneCookbooks(JSONScraper):
         i = 0
         instr = ""
         while i < len(instrList):
-            instr += instrList[i]["text"] + "\n"
+            instr += instrList[i] + "\n"
             i += 1
 
         return instr
@@ -48,7 +47,7 @@ class HundredAndOneCookbooks(JSONScraper):
         return self.data["recipeCategory"][0]
 
     def imgURL(self):
-        return self.data["image"][0]
+        return self.data["image"][3]
 
 
     def sodium(self):
@@ -62,6 +61,7 @@ class HundredAndOneCookbooks(JSONScraper):
 
     def calories(self):
         return self.data["nutrition"]["calories"]
+
 
     def cholesterol(self):
         return self.data["nutrition"]["cholesterol"]

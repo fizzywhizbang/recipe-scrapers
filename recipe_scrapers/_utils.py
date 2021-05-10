@@ -1,4 +1,4 @@
-import re
+import re, time
 
 from functools import wraps
 
@@ -22,6 +22,16 @@ def get_minutes(element):
     except AttributeError:  # if dom_element not found or no matched
         return 0
 
+def timecalc(value):
+    if "h" in value or "H" in value:
+        #time in hours
+        h = value.replace("PT").replace("H").replace("h")
+        HtoM = Int(h) * 60
+        return HtoM
+    if "m" in value or "M" in value:
+        #time in hours
+        m = value.replace("PT").replace("M").replace("m")
+        return m
 
 def normalize_string(string):
     return re.sub(
@@ -53,3 +63,14 @@ def on_exception_return(to_return):
                 return to_return
         return wrap
     return decorate
+
+
+def dateCleaner(d,T):
+    #date cleaner will return a date and time without offset where T = the offset length to remove and
+    #if there is no date it will return today's date and time to fulfill the DB requirements
+    if d != "null":
+        datePosted = d.replace("T", " ")[:-T]
+    else:
+        datePosted = time.strftime('%Y-%m-%d %H:%M:%S')
+
+    return datePosted

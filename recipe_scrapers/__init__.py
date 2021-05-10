@@ -2,7 +2,7 @@ import re
 
 from .allrecipes import AllRecipes
 from .bbcfood import BBCFood
-from .bbcgoodfood import BBCGoodFood
+#from .bbcgoodfood import BBCGoodFood
 from .bonappetit import BonAppetit
 from .closetcooking import ClosetCooking
 from .cookstr import Cookstr
@@ -25,12 +25,17 @@ from .thepioneerwoman import ThePioneerWoman
 from .thevintagemixer import TheVintageMixer
 from .twopeasandtheirpod import TwoPeasAndTheirPod
 from .whatsgabycooking import WhatsGabyCooking
+from .pinchofyum import PinchOfYum
+from .bigoven import BigOven
+from .twelvetomatoes import Twelvetomatoes
+from .bhg import bhg
+from .genericJSON import GenericJSON
 
 
 SCRAPERS = {
     AllRecipes.host(): AllRecipes,
     BBCFood.host(): BBCFood,
-    BBCGoodFood.host(): BBCGoodFood,
+    #BBCGoodFood.host(): BBCGoodFood,
     BonAppetit.host(): BonAppetit,
     ClosetCooking.host(): ClosetCooking,
     Cookstr.host(): Cookstr,
@@ -53,6 +58,11 @@ SCRAPERS = {
     TheVintageMixer.host(): TheVintageMixer,
     TwoPeasAndTheirPod.host(): TwoPeasAndTheirPod,
     WhatsGabyCooking.host(): WhatsGabyCooking,
+    PinchOfYum.host(): PinchOfYum,
+    BigOven.host(): BigOven,
+    Twelvetomatoes.host(): Twelvetomatoes,
+    bhg.host(): bhg,
+    GenericJSON.host(): GenericJSON
 }
 
 
@@ -75,6 +85,7 @@ def url_path_to_dict(path):
 
 class WebsiteNotImplementedError(NotImplementedError):
     '''Error for when the website is not supported by this library.'''
+    #print("website not implemented")
     pass
 
 
@@ -82,9 +93,10 @@ def scrape_me(url_path):
     host_name = url_path_to_dict(url_path.replace('://www.', '://'))['host']
     try:
         scraper = SCRAPERS[host_name]
-    except KeyError:
-        raise WebsiteNotImplementedError(
-            "Website ({}) is not supported".format(host_name))
+    except:
+        #welp since that didn't work let's try a generic JSON
+        scraper = SCRAPERS["generic"]
+        #raise WebsiteNotImplementedError("Website ({}) is not supported".format(host_name))
 
     return scraper(url_path)
 
