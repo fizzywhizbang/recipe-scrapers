@@ -257,18 +257,16 @@ class JSONScraper():
             
             for recipe in self.soup.find_all('script', type='application/ld+json'):
                 
-                if "\"@type\": \"Recipe\"" in recipe.text:
-                    print(recipe.text)
-                if "\"@type\":\"Recipe\"" in recipe.text:
+                # if "\"@type\": \"Recipe\"" in recipe.text:
+                #     f = open("log.txt", "a")
+                #     f.write(recipe.text)
+                #     f.close()
+                if "\"@type\":\"Recipe\"" in recipe.text or "\"@type\": \"Recipe\"" in recipe.text:
                     try:
+                        
                         self.data = json.loads(recipe.text)
                     except:
-                        if "\"@type\": \"Recipe\"" in recipe.text:
-                            try:
-                                self.data = json.loads(recipe.text)
-                            except:
-                        
-                                print("not a recipe")
+                        print("not a recipe?")
 
         self.url = url
     def url(self):

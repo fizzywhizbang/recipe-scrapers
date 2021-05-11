@@ -29,6 +29,7 @@ from .pinchofyum import PinchOfYum
 from .bigoven import BigOven
 from .twelvetomatoes import Twelvetomatoes
 from .bhg import bhg
+from .eatingwell import Eatingwell
 from .genericJSON import GenericJSON
 
 
@@ -62,6 +63,7 @@ SCRAPERS = {
     BigOven.host(): BigOven,
     Twelvetomatoes.host(): Twelvetomatoes,
     bhg.host(): bhg,
+    Eatingwell.host(): Eatingwell,
     GenericJSON.host(): GenericJSON
 }
 
@@ -85,7 +87,7 @@ def url_path_to_dict(path):
 
 class WebsiteNotImplementedError(NotImplementedError):
     '''Error for when the website is not supported by this library.'''
-    #print("website not implemented")
+    # print("website not implemented")
     pass
 
 
@@ -95,6 +97,7 @@ def scrape_me(url_path):
         scraper = SCRAPERS[host_name]
     except:
         #welp since that didn't work let's try a generic JSON
+        print("using generic")
         scraper = SCRAPERS["generic"]
         #raise WebsiteNotImplementedError("Website ({}) is not supported".format(host_name))
 

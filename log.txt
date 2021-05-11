@@ -1,0 +1,349 @@
+
+      [
+    {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://www.eatingwell.com/",
+            "name": "Home",
+            "image": null
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://www.eatingwell.com/recipes/",
+            "name": "Healthy Recipes",
+            "image": null
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@id": "https://www.eatingwell.com/recipes/18043/ingredients/",
+            "name": "Healthy Ingredient Recipes",
+            "image": null
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@id": "https://www.eatingwell.com/recipes/22777/ingredients/meat-poultry/",
+            "name": "Healthy Meat & Poultry Recipes",
+            "image": null
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@id": "https://www.eatingwell.com/recipes/18241/ingredients/meat-poultry/chicken/",
+            "name": "Healthy Chicken Recipes",
+            "image": null
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@id": "https://www.eatingwell.com/recipes/17932/ingredients/meat-poultry/chicken/main-dish/",
+            "name": "Healthy Chicken Main Dish Recipes",
+            "image": null
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@id": "https://www.eatingwell.com/recipes/19039/ingredients/meat-poultry/chicken/main-dish/sandwich/",
+            "name": "Healthy Chicken Sandwich Recipes",
+            "image": null
+          }
+        }
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": "Recipe",
+      "mainEntityOfPage": "https://www.eatingwell.com/recipe/250068/mediterranean-wrap/",
+      "name": "Mediterranean Wrap",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2016%2F06%2F03%2F3757403.jpg",
+        "width": null,
+        "height": null,
+        "caption": "Mediterranean Wrap"
+      },
+      "datePublished": "2016-06-03T04:29:15.000Z",
+      "description": "This wrap is stuffed with chicken tenders and couscous with a hit of lemon and a healthy dose of fresh herbs. Save any leftovers to wrap up for an easy lunch. Serve with: Mixed green salad and a glass of crisp white wine.",
+      "prepTime": null,
+      "cookTime": null,
+      "totalTime": "P0DT0H40M",
+      "recipeIngredient": [
+        "½ cup water",
+        "⅓ cup couscous, preferably whole-wheat",
+        "1 cup chopped fresh parsley",
+        "½ cup chopped fresh mint",
+        "¼ cup lemon juice",
+        "3 tablespoons extra-virgin olive oil",
+        "2 teaspoons minced garlic",
+        "¼ teaspoon salt, divided",
+        "¼ teaspoon freshly ground pepper",
+        "1 pound chicken tenders",
+        "1 medium tomato, chopped",
+        "1 cup chopped cucumber",
+        "4 10-inch spinach or sun-dried tomato wraps   or tortillas"
+      ],
+      "recipeInstructions": [
+        {
+          "@type": "HowToStep",
+          "text": "Bring water to a boil in a small saucepan. Stir in couscous and remove from the heat. Cover and let stand for 5 minutes. Fluff with a fork. Set aside.\n"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Meanwhile, combine parsley, mint, lemon juice, oil, garlic, 1/8 teaspoon salt and pepper in a small bowl.\n"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Toss chicken tenders in a medium bowl with 1 tablespoon of the parsley mixture and the remaining 1/8 teaspoon salt. Place the tenders in a large nonstick skillet and cook over medium heat until cooked though, 3 to 5 minutes per side. Transfer to a clean cutting board. Cut into bite-size pieces when cool enough to handle.\n"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Stir the remaining parsley mixture into the couscous along with tomato and cucumber.\n"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "To assemble wraps, spread about 3/4 cup of the couscous mixture onto each wrap. Divide the chicken among the wraps. Roll the wraps up like a burrito, tucking in the sides to hold the ingredients in. Serve cut in half.\n"
+        }
+      ],
+      "recipeCategory": [
+        "Healthy Recipes",
+        "Healthy Ingredient Recipes",
+        "Healthy Meat & Poultry Recipes",
+        "Healthy Chicken Recipes",
+        "Healthy Chicken Main Dish Recipes",
+        "Healthy Chicken Sandwich Recipes"
+      ],
+      "recipeCuisine": [],
+      "author": [
+        {
+          "@type": "Person",
+          "name": "EatingWell Test Kitchen"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.260869565217392,
+        "ratingCount": 23,
+        "itemReviewed": "Mediterranean Wrap",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "509.5 calories",
+        "carbohydrateContent": "54.9 g",
+        "cholesterolContent": "62.7 mg",
+        "fatContent": "17.9 g",
+        "fiberContent": "5.7 g",
+        "proteinContent": "32.3 g",
+        "saturatedFatContent": "3.3 g",
+        "servingSize": null,
+        "sodiumContent": "725.6 mg",
+        "sugarContent": "4.5 g",
+        "transFatContent": null,
+        "unsaturatedFatContent": null
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "datePublished": "2011-10-30T06:38:16Z",
+          "reviewBody": "Loved it! Even better for lunch the next day! I used prepared white meat chicken tenders even easier.",
+          "reviewRating": {
+            "@type": "Rating",
+            "worstRating": "1",
+            "bestRating": "5",
+            "ratingValue": 4
+          },
+          "author": {
+            "@type": "Person",
+            "name": "tshepard",
+            "image": null,
+            "sameAs": "https://www.allrecipes.com/cook/3200049/"
+          }
+        },
+        {
+          "@type": "Review",
+          "datePublished": "2011-10-30T08:59:44Z",
+          "reviewBody": "My husband and I loved this.. We added some Kalamata olives and and a tad of feta.",
+          "reviewRating": {
+            "@type": "Rating",
+            "worstRating": "1",
+            "bestRating": "5",
+            "ratingValue": 4
+          },
+          "author": {
+            "@type": "Person",
+            "name": "EatingWell User",
+            "image": null,
+            "sameAs": "https://www.allrecipes.com/cook/eatingwelluser/"
+          }
+        },
+        {
+          "@type": "Review",
+          "datePublished": "2014-05-19T10:39:51Z",
+          "reviewBody": "Yummy!!!!!!!!:) It's the best thing that I have ever tasted! Something I would cook again and again for my family and friends! Gotta try this wrap is you have not yet!!!!!!!!!!!!!:)",
+          "reviewRating": {
+            "@type": "Rating",
+            "worstRating": "1",
+            "bestRating": "5",
+            "ratingValue": 5
+          },
+          "author": {
+            "@type": "Person",
+            "name": "EatingWell User",
+            "image": null,
+            "sameAs": "https://www.allrecipes.com/cook/eatingwelluser/"
+          }
+        },
+        {
+          "@type": "Review",
+          "datePublished": "2021-01-08T23:00:17.653Z",
+          "reviewBody": "These wraps were great, I used low carb soft taco tortillas and also substituted quinoa for the couscous.",
+          "reviewRating": {
+            "@type": "Rating",
+            "worstRating": "1",
+            "bestRating": "5",
+            "ratingValue": 4
+          },
+          "author": {
+            "@type": "Person",
+            "name": "amie ",
+            "image": null,
+            "sameAs": "https://www.allrecipes.com/cook/28800332/"
+          }
+        },
+        {
+          "@type": "Review",
+          "datePublished": "2011-10-30T02:41:53Z",
+          "reviewBody": "Simply Scrumptious This was flippin' AWESOME. I made a few changes (did not use the fresh mint or parsley... not really a fan). I also added feta cheese and kalamata olives to the mix. Instead of chicken tenders slathered some of the oil/lemon juice mixture with garlic onto chicken breasts and cooked them in that. Spread the oil mix onto the tortilla and then piled everything into the tortilla. Also used roasted garlic and olive oil couscous. The flavors in this wrap are amazing. Definitely try this. You will not regret it.",
+          "reviewRating": {
+            "@type": "Rating",
+            "worstRating": "1",
+            "bestRating": "5",
+            "ratingValue": 5
+          },
+          "author": {
+            "@type": "Person",
+            "name": "amstoe86@yahoo.com",
+            "image": null,
+            "sameAs": "https://www.allrecipes.com/cook/19151199/"
+          }
+        },
+        {
+          "@type": "Review",
+          "datePublished": "2011-10-30T08:59:20Z",
+          "reviewBody": "Just made this tonight. My family loved it. It was fairly easy and really tasty. I will definitely be making it again. The flavors are so fresh and summery.",
+          "reviewRating": {
+            "@type": "Rating",
+            "worstRating": "1",
+            "bestRating": "5",
+            "ratingValue": 4
+          },
+          "author": {
+            "@type": "Person",
+            "name": "EatingWell User",
+            "image": null,
+            "sameAs": "https://www.allrecipes.com/cook/eatingwelluser/"
+          }
+        },
+        {
+          "@type": "Review",
+          "datePublished": "2016-08-08T09:07:16.663Z",
+          "reviewBody": "I left out the mint and used rotisserie chicken to avoid heating the range. It was so easy quick and yummy! A keeper.",
+          "reviewRating": {
+            "@type": "Rating",
+            "worstRating": "1",
+            "bestRating": "5",
+            "ratingValue": 4
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Catnanny",
+            "image": null,
+            "sameAs": "https://www.allrecipes.com/cook/8779780/"
+          }
+        },
+        {
+          "@type": "Review",
+          "datePublished": "2011-10-30T02:39:59Z",
+          "reviewBody": "Outstanding Sitting here eating this right now. Made as is and it is terrific. I will add Feta the next time I make this would only boost the flavor although I really don't think it needs anything else.",
+          "reviewRating": {
+            "@type": "Rating",
+            "worstRating": "1",
+            "bestRating": "5",
+            "ratingValue": 4
+          },
+          "author": {
+            "@type": "Person",
+            "name": "kturner2206",
+            "image": null,
+            "sameAs": "https://www.allrecipes.com/cook/14947622/"
+          }
+        },
+        {
+          "@type": "Review",
+          "datePublished": "2014-02-27T01:25:01Z",
+          "reviewBody": "Just tried this recipe. I love it. My kids loved it. We used grilled chicken instead. I saw some comments about adding Feta. Great idea for next time!",
+          "reviewRating": {
+            "@type": "Rating",
+            "worstRating": "1",
+            "bestRating": "5",
+            "ratingValue": 4
+          },
+          "author": {
+            "@type": "Person",
+            "name": "EatingWell User",
+            "image": null,
+            "sameAs": "https://www.allrecipes.com/cook/eatingwelluser/"
+          }
+        }
+      ],
+      "video": {
+        "@context": "http://schema.org",
+        "@type": "VideoObject",
+        "name": "How to Make a Mediterranean Wrap",
+        "description": "Pack a healthy Mediterranean lunch for work!",
+        "uploadDate": "2017-04-27T16:52:28.145Z",
+        "duration": "PT40.747S",
+        "thumbnailUrl": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fcf-images.us-east-1.prod.boltdns.net%2Fv1%2Fstatic%2F5118192885001%2Fba384988-9fc5-4f96-84af-a4bf01bd1462%2F259e5e92-30e7-4a5b-b80b-58536f02fe84%2F160x90%2Fmatch%2Fimage.jpg",
+        "publisher": {
+          "@type": "Organization",
+          "name": "EatingWell",
+          "url": "https://www.eatingwell.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.eatingwell.com/img/logo.png",
+            "width": 275,
+            "height": 60
+          },
+          "sameAs": [
+            "https://www.facebook.com/EatingWell/",
+            "https://twitter.com/EatingWell",
+            "https://www.pinterest.com/eatingwell/",
+            "https://instagram.com/eatingwell/",
+            "https://www.youtube.com/user/eatingwell"
+          ]
+        },
+        "embedUrl": "https://players.brightcove.net/5118192885001/default_default/index.html?videoId=5413612786001"
+      }
+    }
+  ]
+    

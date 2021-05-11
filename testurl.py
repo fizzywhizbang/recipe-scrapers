@@ -55,4 +55,4 @@ print("Carbs:%s" % carbs)
 print("Calories:%s" % calories)
 print("Cholesterol:%s" % cholesterol)
 
-print(rawdata)
+# print(rawdata)
