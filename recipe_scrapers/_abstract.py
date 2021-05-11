@@ -254,13 +254,21 @@ class JSONScraper():
         else:
             response = requests.get(url, headers=self.header, proxies=self.proxy)
             self.soup = BeautifulSoup(response.content, 'lxml')
-
+            
             for recipe in self.soup.find_all('script', type='application/ld+json'):
+                
+                if "\"@type\": \"Recipe\"" in recipe.text:
+                    print(recipe.text)
                 if "\"@type\":\"Recipe\"" in recipe.text:
                     try:
                         self.data = json.loads(recipe.text)
                     except:
-                        print("not a recipe")
+                        if "\"@type\": \"Recipe\"" in recipe.text:
+                            try:
+                                self.data = json.loads(recipe.text)
+                            except:
+                        
+                                print("not a recipe")
 
         self.url = url
     def url(self):
