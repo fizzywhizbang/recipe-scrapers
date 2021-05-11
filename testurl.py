@@ -2,6 +2,7 @@
 
 from recipe_scrapers import scrape_me
 import sys, types
+from imagelib import getBase64Image
 
 print("%s" % (sys.argv[1]))  # for testing
 url = sys.argv[1]
@@ -55,4 +56,8 @@ print("Carbs:%s" % carbs)
 print("Calories:%s" % calories)
 print("Cholesterol:%s" % cholesterol)
 
+#write image to base64 file
+f = open("image.txt", "a")
+f.write(getBase64Image(imgURL))
+f.close()
 # print(rawdata)
