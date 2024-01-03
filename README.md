@@ -6,7 +6,7 @@ a separate package. **No Python 2 support.** " hhursev
 I have added to the original scraper to add JSON parsing to simplify scraping web sites that follow the schema.org format for ld+json. I have also added more data to scrape for my project.
 In addition I have added a random user agent and scraping through random proxy servers to limit getting blocked.
 
-    pip install git+git://github.com/levinems/recipe-scrapers.git
+    pip install git+git://github.com/fizzywhizbang/recipe-scrapers.git
 
 then:
 
@@ -79,7 +79,7 @@ site - please fire an issue asap.
 
 Assuming you have [virtualenv](https://pypi.python.org/pypi/virtualenv) and [virtualenvwrapper](http://virtualenvwrapper.readthedocs.io/en/latest/) installed, navigate to the directory where you want this project to live in and drop these lines
 
-    git clone git@github.com:levinems/recipe-scrapers.git &&
+    git clone git@github.com:fizzywhizbang/recipe-scrapers.git &&
     cd recipe-scrapers &&
     mkvirtualenv -a `pwd` -p python3 -r requirements.txt recipe-scrapers &&
     coverage run tests.py &&
